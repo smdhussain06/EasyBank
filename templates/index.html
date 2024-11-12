@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBank - Home</title>
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link to main.css for general styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+</head>
+<body>
+
+    <!-- Main Content -->
+    <header>
+        <h1>Welcome To</h1>
+        <h1>EasyBank</h1>
+        <nav>
+            <a href="{{ url_for('login') }}">Login</a> | 
+            <a href="{{ url_for('register') }}">Register</a> | 
+            <a href="{{ url_for('services') }}">Services</a> | 
+            <a href="{{ url_for('contact') }}">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Trust Section -->
+    <p>Your Trusted Banking Partner</p>
+    <p>Manage your finances easily with EasyBank.</p>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Statement - EasyBank</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+</head>
+<body>
+
+<h1>Your Account Statement</h1>
+
+<table border='1'>
+  <!-- Example table structure -->
+  <!-- Replace with dynamic data -->
+  <tr><th>Date</th><th>Description</th><th>Amount ($)</th><th>Balance ($)</th></tr> 
+  <!-- Add rows dynamically -->
+  {% for transaction in transactions %}
+  <tr>
+      <td>{{ transaction.date }}</td>
+      <td>{{ transaction.description }}</td>
+      <td>{{ transaction.amount }}</td>
+      <td>{{ transaction.balance }}</td>
+  </tr> 
+  {% endfor %}
+  
+</table>
+
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+
+</body>
+</html>
